@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gohona Guccho | Coming Soon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --gold: #C5A059;
+            --deep-gold: #996515;
+            --ivory: #FDFCFB;
+            --charcoal: #1A1A1A;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--ivory);
+            color: var(--charcoal);
+            overflow-x: hidden;
+        }
+
+        .serif { font-family: 'Playfair Display', serif; }
+
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #F4E6C0 50%, #996515 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes slowZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        .animate-slow-zoom {
+            animation: slowZoom 20s infinite alternate ease-in-out;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .blur-backdrop {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        .shimmer-btn {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shimmer-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: rotate(45deg);
+            transition: 0.5s;
+            pointer-events: none;
+        }
+
+        .shimmer-btn:hover::after {
+            left: 120%;
+        }
+    </style>
+</head>
+<body class="selection:bg-[#C5A059] selection:text-white">
+
+    <nav class="fixed top-0 w-full z-50 p-8 md:p-12 flex justify-center">
+        <div class="reveal active">
+            <h1 class="serif text-2xl md:text-3xl tracking-[0.3em] font-light text-center">
+                GOHONA <span class="gold-gradient font-bold italic">GUCCHO</span>
+            </h1>
+            <div class="h-[1px] w-12 bg-[#C5A059] mx-auto mt-2"></div>
+        </div>
+    </nav>
+
+    <main class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1584302179602-e4c3d3fd629d?q=80&w=2070&auto=format&fit=crop" 
+                 class="w-full h-full object-cover animate-slow-zoom opacity-40" 
+                 alt="Luxury Backdrop">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#FDFCFB]/50 to-[#FDFCFB]"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-5xl">
+            <span class="block text-[10px] uppercase tracking-[0.6em] mb-6 reveal active" style="transition-delay: 200ms;">Exquisite Craftsmanship is Dawning</span>
+            
+            <h2 class="serif text-5xl md:text-8xl font-light leading-tight mb-10 reveal active" style="transition-delay: 400ms;">
+                Refining the Art <br> of <span class="italic">Timeless Beauty</span>
+            </h2>
+
+            <div id="countdown" class="flex justify-center space-x-6 md:space-x-12 mb-12 reveal active" style="transition-delay: 600ms;">
+                <div class="text-center">
+                    <span id="days" class="serif text-3xl md:text-5xl block">00</span>
+                    <span class="text-[8px] uppercase tracking-widest text-gray-500">Days</span>
+                </div>
+                <div class="text-center">
+                    <span id="hours" class="serif text-3xl md:text-5xl block">00</span>
+                    <span class="text-[8px] uppercase tracking-widest text-gray-500">Hours</span>
+                </div>
+                <div class="text-center">
+                    <span id="minutes" class="serif text-3xl md:text-5xl block">00</span>
+                    <span class="text-[8px] uppercase tracking-widest text-gray-500">Minutes</span>
+                </div>
+                <div class="text-center">
+                    <span id="seconds" class="serif text-3xl md:text-5xl block">00</span>
+                    <span class="text-[8px] uppercase tracking-widest text-gray-500">Seconds</span>
+                </div>
+            </div>
+
+            <p class="text-xs md:text-sm text-gray-500 uppercase tracking-[0.3em] max-w-xl mx-auto leading-loose reveal active" style="transition-delay: 800ms;">
+                Our digital studio is currently being polished. We are curating a collection that bridges heritage and modern luxury. 
+            </p>
+        </div>
+    </main>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h3 class="serif text-3xl md:text-4xl mb-4">A Sneak Peek</h3>
+                <div class="w-16 h-[1px] bg-black/10 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="group reveal relative overflow-hidden" style="transition-delay: 100ms;">
+                    <div class="aspect-[3/4] bg-gray-50 overflow-hidden rounded-sm">
+                        <img src="1.jpg" 
+                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000" 
+                             alt="Jewelry Preview">
+                    </div>
+                    <div class="mt-6 text-center">
+                        <h4 class="serif text-lg italic">The Aurelian Collection</h4>
+                        <p class="text-[9px] uppercase tracking-widest text-gray-400 mt-2">Launching Soon</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="group reveal relative overflow-hidden" style="transition-delay: 300ms;">
+                    <div class="aspect-[3/4] bg-gray-50 overflow-hidden rounded-sm">
+                        <img src="2.jpg" 
+                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000" 
+                             alt="Jewelry Preview">
+                    </div>
+                    <div class="mt-6 text-center">
+                        <h4 class="serif text-lg italic">Vintage Heirloom Sets</h4>
+                        <p class="text-[9px] uppercase tracking-widest text-gray-400 mt-2">Limited Edition</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="group reveal relative overflow-hidden" style="transition-delay: 500ms;">
+                    <div class="aspect-[3/4] bg-gray-50 overflow-hidden rounded-sm">
+                        <img src="3.jpg" 
+                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000" 
+                             alt="Jewelry Preview">
+                    </div>
+                    <div class="mt-6 text-center">
+                        <h4 class="serif text-lg italic">Signature Filigree</h4>
+                        <p class="text-[9px] uppercase tracking-widest text-gray-400 mt-2">Private Studio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#1A1A1A] text-white">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h3 class="serif text-3xl md:text-5xl font-light mb-8 reveal">Be the first to enter <br> <span class="italic gold-gradient">The Vault</span></h3>
+            <p class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-12 reveal">Leave your email for an exclusive invitation to our private launch event.</p>
+            
+            <form id="waitlist-form" class="reveal flex flex-col md:flex-row items-center border-b border-white/20 pb-4 group">
+                <input type="email" placeholder="EMAIL ADDRESS" required
+                       class="bg-transparent w-full py-4 text-[10px] tracking-[0.5em] focus:outline-none placeholder:text-gray-600">
+                <button type="submit" class="mt-4 md:mt-0 px-8 py-4 text-[10px] tracking-[0.4em] font-semibold bg-[#C5A059] text-black hover:bg-white transition-colors shimmer-btn">
+                    NOTIFY ME
+                </button>
+            </form>
+            <div id="success-msg" class="hidden mt-8 text-[10px] tracking-[0.3em] text-[#C5A059] uppercase">
+                Your place in the vault has been reserved.
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <span class="text-[10px] uppercase tracking-[0.4em] text-gray-400 block mb-4">Beyond the Boutique</span>
+                <h3 class="serif text-3xl md:text-5xl font-light">Follow Our <span class="italic">Social Media</span></h3>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-8">
+                <!-- Instagram Card -->
+                <a href="https://www.instagram.com/gohona.guccho" target="_blank" class="w-full sm:w-64 group bg-white p-6 rounded-2xl shadow-sm border border-amber-50 hover:border-amber-300 hover:shadow-xl hover:shadow-amber-200/20 transition-all duration-300">
+                    <div class="w-14 h-14 bg-pink-50 text-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gradient-to-tr group-hover:from-yellow-400 group-hover:via-red-500 group-hover:to-purple-600 group-hover:text-white transition-all">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800">Instagram</h4>
+                    <p class="text-[10px] text-slate-400 uppercase tracking-widest mt-1">@gohona.guccho</p>
+                </a>
+
+                <!-- Facebook Card -->
+                <a href="https://www.facebook.com/gohonaguccho" target="_blank" class="w-full sm:w-64 group bg-white p-6 rounded-2xl shadow-sm border border-amber-50 hover:border-amber-300 hover:shadow-xl hover:shadow-amber-200/20 transition-all duration-300">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800">Facebook</h4>
+                    <p class="text-[10px] text-slate-400 uppercase tracking-widest mt-1">@gohonaguccho</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 text-center">
+        <div class="flex justify-center space-x-12 mb-10 reveal">
+            <a href="#" class="text-gray-400 hover:text-black transition-colors"><i class="fa-brands fa-instagram text-xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-black transition-colors"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+        </div>
+        <p class="text-[8px] uppercase tracking-[0.5em] text-gray-300">&copy; 2026 GOHONA GUCCHO • Dhaka, Bangladesh</p>
+    </footer>
+
+    <script>
+        // Countdown Logic
+        function updateCountdown() {
+            // Set launch date to 30 days from now for demo purposes
+            const launchDate = new Date();
+            launchDate.setDate(launchDate.getDate() + 24);
+            launchDate.setHours(launchDate.getHours() + 18);
+
+            function refresh() {
+                const now = new Date().getTime();
+                const diff = launchDate - now;
+
+                const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('days').innerText = d.toString().padStart(2, '0');
+                document.getElementById('hours').innerText = h.toString().padStart(2, '0');
+                document.getElementById('minutes').innerText = m.toString().padStart(2, '0');
+                document.getElementById('seconds').innerText = s.toString().padStart(2, '0');
+            }
+            
+            setInterval(refresh, 1000);
+            refresh();
+        }
+
+        // Reveal animations on scroll
+        function initReveal() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        }
+
+        // Handle form submission
+        document.getElementById('waitlist-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.classList.add('hidden');
+            document.getElementById('success-msg').classList.remove('hidden');
+        });
+
+        window.onload = () => {
+            updateCountdown();
+            initReveal();
+        };
+    </script>
+</body>
+</html>
