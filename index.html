@@ -234,9 +234,9 @@
         // Countdown Logic
         function updateCountdown() {
             // Set launch date to 30 days from now for demo purposes
-            const launchDate = new Date();
-            launchDate.setDate(launchDate.getDate() + 24);
-            launchDate.setHours(launchDate.getHours() + 18);
+            const launchDate = new Date('June 9, 2026 00:00:00');
+            launchDate.setDate(launchDate.getDate() +0);
+            launchDate.setHours(launchDate.getHours() + 0);
 
             function refresh() {
                 const now = new Date().getTime();
